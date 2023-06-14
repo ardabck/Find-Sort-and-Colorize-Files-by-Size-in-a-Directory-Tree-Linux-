@@ -2,11 +2,13 @@
 
 This script is a useful tool for system administrators and users who need to find, sort, and colorize files by size in a directory tree. The script is designed to work in a Unix/Linux environment.
 
+
 ### Code
 
 ```bash
 find /backup -maxdepth 5 -type f -exec du -sh {} \; | sort -rh | awk '{ printf "\033[1;33m%s\033[0m\t\033[1;36m%s\033[0m\n", $1, $2 }'
 ```
+
 
 ### Explanation
 
@@ -20,3 +22,6 @@ The script performs the following steps:
 
 
 The script outputs the list of files with their sizes in descending order. The sizes are colorized in yellow, and filenames are colorized in cyan for better visibility.
+
+### Sample Output
+![Screenshot](https://i.imgur.com/SMHsIZD.png)

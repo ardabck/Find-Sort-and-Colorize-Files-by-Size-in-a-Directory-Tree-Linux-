@@ -6,7 +6,7 @@ This script is a useful tool for system administrators and users who need to fin
 
 ```bash
 find /backup -maxdepth 5 -type f -exec du -sh {} \; | sort -rh | awk '{ printf "\033[1;33m%s\033[0m\t\033[1;36m%s\033[0m\n", $1, $2 }'
-
+```
 
 ### Explanation
 
